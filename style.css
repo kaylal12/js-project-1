@@ -1,0 +1,66 @@
+.page {
+  background-color: blue;
+  width: 100%;
+  height: 1000px;
+  margin: auto;
+}
+
+.header {
+  background-color: grey;
+  width: 800px;
+  height: 100px;
+  margin: auto;
+}
+
+.container {
+  background-color: lightblue;
+  width: 800px;
+  height: 500px;
+  margin: auto;
+
+}
+
+.gameboard {
+  background-color: lightgreen;
+  width: 500px;
+  height: 510px;
+}
+
+.side {
+  background-color: lightblue;
+  width: 300px;
+  height: 500px;
+  position: relative;
+  float: right;
+  top: -510px;
+}
+
+.sidebar {
+  background-color: lightgreen;
+  width: 200px;
+  height: 350px;
+  border: solid 2px lightpink;
+  margin: auto;
+}
+
+.square {
+  background-color: lightpink;
+  width: 160px;
+  height: 160px;
+  margin: 3px;
+  float: left;
+}
+
+.clear {
+  clear: left;
+}
+
+.bottom {
+  background-color: grey;
+  width: 800px;
+  height: 50px;
+  margin: auto;
+}
+
+
+
