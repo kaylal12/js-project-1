@@ -10,6 +10,21 @@
   width: 800px;
   height: 100px;
   margin: auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+p {
+  display: inline-block;
+}
+
+.scoreboard {
+  background-color: white;
+  width: 800px;
+  height: 50px;
 }
 
 .container {
@@ -24,24 +39,9 @@
   background-color: lightgreen;
   width: 500px;
   height: 510px;
+  margin: 0 auto;
 }
 
-.side {
-  background-color: lightblue;
-  width: 300px;
-  height: 500px;
-  position: relative;
-  float: right;
-  top: -510px;
-}
-
-.sidebar {
-  background-color: lightgreen;
-  width: 200px;
-  height: 350px;
-  border: solid 2px lightpink;
-  margin: auto;
-}
 
 .square {
   background-color: lightpink;
@@ -49,6 +49,7 @@
   height: 160px;
   margin: 3px;
   float: left;
+  border-radius: 25px;
 }
 
 .clear {
@@ -60,7 +61,18 @@
   width: 800px;
   height: 50px;
   margin: auto;
+  text-align: center;
 }
+
+.button {
+  padding: 5px;
+  background-color:lightblue;
+  text-decoration: none;
+  width: 250px;
+  margin: 12px auto;
+  border-radius: 15px;
+}
+
 
 
 
