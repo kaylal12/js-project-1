@@ -10,6 +10,10 @@ $(document).ready(function() {
   var board = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];
 
   $(".gameboard").hide();
+  $("#play").disable(true);
+
+  // needs to enable play button after login
+
 
   // play button function to start game
   $("#play").click(function() {
@@ -107,7 +111,7 @@ $(document).ready(function() {
 
 
   // check win function with 2 parameters/arguements
-  function checkWins(n,player){
+  var checkWins = function checkWins(n,player){
     // checks through each part of the array to see if it matches
     if((board[0][0]==n && board[0][1]==n && board[0][2]==n) ||
       (board[1][0]==n && board[1][1]==n && board[1][2]==n) ||
