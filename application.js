@@ -4,6 +4,7 @@ $(document).ready(function() {
   var player1 = "X";
   var player2 = "O";
   var currentPlayer;
+  var winner;
   var board = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];
 
   // play button function to start game
@@ -24,6 +25,8 @@ $(document).ready(function() {
     // empties each square
     $(".square").empty();
     game = true;
+    turns = 0;
+    board = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
     currentPlayer = player1;
     showCurrentPlayer();
   };
@@ -47,20 +50,13 @@ $(document).ready(function() {
         // sets the square to 1 in the board array
         board[row][square] = 1;
 
-        // variable for win function
-        if(checkWins(1, player1)) {
-          return;
-        }
+        // checkes if player1 won
+        // returns true or false
+        winner =checkWins(1, player1);
+
          // switch to player2
         currentPlayer = player2;
-
-        // if not winner && all turns taken
-        // print message for tie
-        if (!player1Winner && turns == 9) {
-            $(".message").text("It's a tie!");
-            return;
-
-        }
+        showCurrentPlayer();
       } else {
         // adds player2's text into space
         $(this).text(player2);
@@ -69,22 +65,22 @@ $(document).ready(function() {
         board[row][square] = 2;
         // switch to player1
         currentPlayer = player1;
+        showCurrentPlayer();
 
-        // variable for win function
-        var player2Winner = checkWins(2, player2);
+        // checks if player2 won
+        // returns true or false
+        winner = checkWins(2, player2);
+      }
 
-        // if not winner && all turns taken
-        // prints message for tie
-        if (!player2Winner && turns == 9) {
+      if (!winner && turns == 9) {
             $(".message").text("It's a tie!");
             return;
         }
-      }
 
-      // print message for current player
-      showCurrentPlayer();
     }
   });
+
+
 
   // check win function with 2 parameters/arguements
   function checkWins(n,player){
@@ -102,6 +98,7 @@ $(document).ready(function() {
 
       // prints message for winner
       $(".message").text(player + " wins!");
+      game = false;
       return true;
     }
     return false;
