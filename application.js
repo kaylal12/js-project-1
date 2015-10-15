@@ -10,11 +10,11 @@ $(document).ready(function() {
   var board = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];
 
   $(".gameboard").hide();
-  $("#play").disable(true);
+  // $("#play").disable(true);
 
-  $("[name='login']").click(function() {
-    $("#play").disable(false);
-  })
+  // $("[name='login']").click(function() {
+  //   $("#play").disable(false);
+  // })
 
   // play button function to start game
   $("#play").click(function() {
@@ -108,8 +108,6 @@ $(document).ready(function() {
 
     }
   });
-
-
 
   // check win function with 2 parameters/arguements
   function checkWins(n,player){
