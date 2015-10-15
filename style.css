@@ -18,7 +18,7 @@ h1 {
 }
 
 p {
-  display: inline-block;
+  color: white;
 }
 
 .message {
@@ -60,7 +60,7 @@ p {
 .gameboard {
   background-color: lightgreen;
   width: 500px;
-  height: 510px;
+  height: 500px;
   margin: 0 auto;
   position: relative;
 }
