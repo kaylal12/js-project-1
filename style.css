@@ -57,6 +57,14 @@ p {
   margin: 0 auto;
 }
 
+.loginbox {
+  background-color: lightgreen;
+  width: 400px;
+  height: 300px;
+  margin: 0 auto;
+  text-align: center;
+}
+
 .gameboard {
   background-color: lightgreen;
   width: 500px;

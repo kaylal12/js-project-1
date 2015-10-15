@@ -9,8 +9,12 @@ $(document).ready(function() {
   var wins2 = 0;
   var board = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];
 
+  $(".gameboard").hide();
+
   // play button function to start game
   $("#play").click(function() {
+    $(".loginbox").hide();
+    $(".gameboard").show();
     game = true;
     // sets first player of game and prints message
     currentPlayer = player1;
