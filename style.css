@@ -57,6 +57,22 @@ p {
   margin: 0 auto;
 }
 
+.loginbox {
+  background-color: lightgreen;
+  width: 400px;
+  height: 300px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#play {
+  padding: 5px;
+  background-color: lightblue;
+  text-decoration: none;
+  width: 150px;
+  margin: 50px;
+}
+
 .gameboard {
   background-color: lightgreen;
   width: 500px;
@@ -88,7 +104,7 @@ p {
   text-align: center;
 }
 
-.button {
+#reset {
   padding: 5px;
   background-color:lightblue;
   text-decoration: none;
