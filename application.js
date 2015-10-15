@@ -1,6 +1,9 @@
+var token = '';
+
 $(document).ready(function() {
   var turns = 0;
   var game = false;
+  var gameId = null;
   var player1 = "X";
   var player2 = "O";
   var currentPlayer;
@@ -10,21 +13,29 @@ $(document).ready(function() {
   var board = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];
 
   $(".gameboard").hide();
-  $("#play").disable(true);
-
-  // needs to enable play button after login
-
+  $("#play").prop("disabled", true);
 
   // play button function to start game
-  $("#play").click(function() {
+  $("#play").on('click', function() {
     $(".loginbox").hide();
-    $(".gameboard").show();
-    game = true;
     // sets first player of game and prints message
     currentPlayer = player1;
     showCurrentPlayer();
     $("#score1").text(wins1);
     $("#score2").text(wins2);
+
+    var createGameCB = function createGameCB(error, data) {
+      if (error) {
+        console.error(error);
+        return;
+      }
+      gameId = data.game.id;
+
+      game = true;
+      $(".gameboard").show();
+    }
+
+    tttapi.createGame(token, createGameCB);
   })
 
   // message for current player
@@ -44,7 +55,7 @@ $(document).ready(function() {
   };
 
   // click function for squares to play
-  $(".square").click(function() {
+  $(".square").on('click',function(event) {
 
     // set row variable to show the parent of .square(.row)'s index #
     var row = $(this).parent().index();
@@ -101,10 +112,26 @@ $(document).ready(function() {
       }
 
       if (!winner && turns == 9) {
-            $(".message").text("It's a tie!");
-            return;
-        }
+        game = false;
+        $(".message").text("It's a tie!");
+      }
 
+      var markCellCB = function markCellCB(error, data) {
+        if (error) {
+          console.error(error);
+          return;
+        }
+      };
+
+      tttapi.markCell(gameId, {
+        game: {
+          cell: {
+            index: $(event.target).data('index'),
+            value: currentPlayer === 'X' ? 'o' : 'x'
+          },
+          over: !game
+        }
+      }, token, markCellCB);
     }
   });
 
@@ -134,7 +161,7 @@ $(document).ready(function() {
   }
 
   // set click event for reset button
-  $("#reset").click(clear);
+  $("#reset").on('click', clear);
 
 });
 
@@ -286,8 +313,10 @@ $(function() {
         callback(error);
         return;
       }
+      $("#play").prop("disabled", false);
       callback(null, data);
-      $('.token').val(data.user.token);
+      //$('.token').val(data.user.token);
+      token = data.user.token;
     };
     e.preventDefault();
     tttapi.login(credentials, cb);
