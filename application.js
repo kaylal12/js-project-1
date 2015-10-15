@@ -49,18 +49,17 @@ $(document).ready(function() {
         $(this).text(player1);
         // sets the square to 1 in the board array
         board[row][square] = 1;
+        // switch to player2
+        currentPlayer = player2;
+        showCurrentPlayer();
 
         // checkes if player1 won
         // returns true or false
-        winner =checkWins(1, player1);
-
-         // switch to player2
-        currentPlayer = player2;
-        showCurrentPlayer();
+        winner = checkWins(1, player1);
       } else {
+        turns++;
         // adds player2's text into space
         $(this).text(player2);
-        turns++;
         // sets the square to 2 in the board array
         board[row][square] = 2;
         // switch to player1
@@ -108,4 +107,3 @@ $(document).ready(function() {
   $("#reset").click(clear);
 
 });
-
