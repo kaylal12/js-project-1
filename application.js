@@ -5,6 +5,8 @@ $(document).ready(function() {
   var player2 = "O";
   var currentPlayer;
   var winner;
+  var wins1 = 0;
+  var wins2 = 0;
   var board = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];
 
   // play button function to start game
@@ -13,6 +15,8 @@ $(document).ready(function() {
     // sets first player of game and prints message
     currentPlayer = player1;
     showCurrentPlayer();
+    $("#score1").text(wins1);
+    $("#score2").text(wins2);
   })
 
   // message for current player
@@ -56,6 +60,14 @@ $(document).ready(function() {
         // checkes if player1 won
         // returns true or false
         winner = checkWins(1, player1);
+
+        // if winner, add win
+        if(winner) {
+          wins1++;
+        }
+
+        // show score
+        $("#score1").text(wins1);
       } else {
         turns++;
         // adds player2's text into space
@@ -69,6 +81,15 @@ $(document).ready(function() {
         // checks if player2 won
         // returns true or false
         winner = checkWins(2, player2);
+
+        // if winner, add win
+        if(winner) {
+          wins2++;
+        }
+
+        // show score
+        $("#score2").text(wins2);
+
       }
 
       if (!winner && turns == 9) {
@@ -97,6 +118,7 @@ $(document).ready(function() {
 
       // prints message for winner
       $(".message").text(player + " wins!");
+
       game = false;
       return true;
     }
