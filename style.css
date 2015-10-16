@@ -8,6 +8,7 @@ html {
 }
 
 .page {
+  background: no-repeat center center fixed;
   width: 100%;
   margin: auto;
 }
