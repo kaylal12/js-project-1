@@ -26,7 +26,7 @@ include a way to list and show the games.
 
 As of right now, the game is fully functioning (can play, see a winner, stop playing when there is a winner, show ties, show wins, etc), however, it is not fully commicating with the back-end.
 
-**[Play Tic Tac Toe!](https://kaylal12.github.io/js-project-1/)**
+**[Play Tic Tac Toe!](http://kaylal12.github.io/js-project-1/)**
 
 
 
