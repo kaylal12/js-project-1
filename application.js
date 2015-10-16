@@ -113,7 +113,8 @@ $(document).ready(function() {
 
       if (!winner && turns == 9) {
         game = false;
-        $(".message").text("It's a tie!");
+        $(".message").text("Cat's Game!!");
+        $(".page").css("background-image","url('img/cats.jpg')");
       }
 
       var markCellCB = function markCellCB(error, data) {
