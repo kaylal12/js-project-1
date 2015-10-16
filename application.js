@@ -45,6 +45,7 @@ $(document).ready(function() {
 
   // restart button function to clear board and start over
   var clear = function() {
+    $(".page").css("background-image", "");
     // empties each square
     $(".square").empty();
     game = true;
