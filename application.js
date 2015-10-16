@@ -69,7 +69,7 @@ $(document).ready(function() {
         // add one turn
         turns++;
         // adds player1's text into the space
-        $(this).text(player1);
+        $(this).text(player1).css("color", "grey");
         // sets the square to 1 in the board array
         board[row][square] = 1;
         // switch to player2
@@ -90,7 +90,7 @@ $(document).ready(function() {
       } else {
         turns++;
         // adds player2's text into space
-        $(this).text(player2);
+        $(this).text(player2).css("color", "white");
         // sets the square to 2 in the board array
         board[row][square] = 2;
         // switch to player1
@@ -133,9 +133,17 @@ $(document).ready(function() {
         }
       }, token, markCellCB);
     }
+
+  var showGameCB = function showGameCB(error, data) {
+    if(error) {
+      console.error(error);
+      return;
+    }
+  }
+
+    tttapi.showGame(gameId, token, showGameCB)
+
   });
-
-
 
   // check win function with 2 parameters/arguements
   var checkWins = function checkWins(n,player){
@@ -159,17 +167,6 @@ $(document).ready(function() {
     }
     return false;
   }
-
-  // var showGameCB = function showGameCB(error, data) {
-  //   if(error) {
-  //     console.error(error);
-  //     return;
-  //   }
-  //   gameId = data.game.id;
-  //   data.game.cell;
-
-  //   tttapi.showGame(gameId, token, showGameCB)
-  // }
 
   // set click event for reset button
   $("#reset").on('click', clear);
