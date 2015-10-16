@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" type="text/css" href="reset.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+ <!-- <form id="list-games">
+    <input name="list-games" type="submit" value="List Games">
+    <input class="token" name="token" type="hidden">
+  </form>
+  <form id="create-game">
+    <input name="create-game" type="submit" value="Create Game">
+    <input class="token" name="token" type="hidden">
+  </form>
+  <form id="show-game">
+    <label for="show-id">Id:</label>
+    <input id="show-id" type="text" size="4">
+    <input name="show-game" type="submit" value="Show Game">
+    <input class="token" name="token" type="hidden">
+ </form>
+ <form id="mark-cell">
+    <label for="mark-id">Id:</label>
+    <input id="mark-id" type="text" size="4">
+    <label for="mark-index">Index:</label>
+    <input name="index" id="mark-index" type="text" size="4">
+    <label for="mark-value">Value:</label>
+    <input name="value" id="mark-value" type="text" size="4">
+    <input name="mark-cell" type="submit" value="Mark Cell">
+    <input class="token" name="token" type="hidden">
+  </form>
+  <br>
+  <label for="result">Result</label>
+  <textarea id="result"></textarea> -->
+
+  <div class="page">
+    <div class="header">
+      <h1>Tic Tac Toe!</h1>
+      <div class="message">
+      </div>
+    </div>
+    <div class="container">
+      <div class="scoreboard left">
+        <h3>Player 1 Score:</h3>
+        <div id="score1" class="scorebox"></div>
+      </div>
+      <div class="scoreboard right">
+        <h3>Player 2 Score:</h3>
+        <div id="score2" class="scorebox"></div>
+      </div>
+      <div class="loginbox">
+        <h2>Register</h2>
+        <form id="register">
+          <input name="email" type="text" placeholder="email">
+          <input name="password" type="password" placeholder="password">
+          <input name="password_confirmation" type="password" placeholder="password confirmation">
+          <input name="register" type="submit" value="Register">
+          </form>
+        </form>
+        <h2>Login</h2>
+        <form id="login">
+          <input name="email" type="text" placeholder="email">
+          <input name="password" type="password" placeholder="password">
+          <input name="login" type="submit" value="Login">
+        </form>
+        <button id="play" class="button">Play</button>
+      </div>
+      <div class="gameboard">
+        <div class="row">
+          <div class="square" data-index = "0"></div>
+          <div class="square" data-index = "1"></div>
+          <div class="square" data-index = "2"></div>
+        </div>
+        <div class="row">
+          <div class="square clear" data-index = "3"></div>
+          <div class="square" data-index = "4"></div>
+          <div class="square" data-index = "5"></div>
+        </div>
+        <div class="row">
+          <div class="square clear" data-index = "6"></div>
+          <div class="square" data-index = "7"></div>
+          <div class="square" data-index = "8"></div>
+        </div>
+      </div>
+      <div class="side">
+        <div class="sidebar">
+        </div>
+      </div>
+    </div>
+    <div class="bottom">
+      <button id="reset" class="button">Reset</button>
+    </div></div>
+  </div>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="application.js" type="text/javascript"></script>
+</html>
+

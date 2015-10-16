@@ -1,0 +1,163 @@
+@font-face {
+  font-family: MoonFlowerBold;
+  src: url(img/MoonFlowerBold.ttf);
+}
+
+html {
+  font-family: MoonFlowerBold;
+}
+
+.page {
+  background: no-repeat center center fixed;
+  width: 100%;
+  margin: auto;
+}
+
+.header {
+  background-color: white;
+  width: 800px;
+  height: 150px;
+  margin: auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 24px;
+  padding: 10px;
+}
+
+p {
+  color: white;
+}
+
+.message {
+  font-size: 24px;
+  background-color: white;
+  width: 800px;
+  height: 50px;
+  margin-top: 20px;
+}
+
+.container {
+  background-color: white;
+  width: 800px;
+  height: 500px;
+  margin: auto;
+
+}
+
+input {
+  margin: 5px;
+}
+
+.scoreboard {
+  background-color: lightpink;
+  width: 150px;
+  height: 100px;
+  text-align: center;
+  border-radius: 25px;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.scorebox {
+  background-color: white;
+  width: 75px;
+  height: 50px;
+  margin: 0 auto;
+  font-size: 24px;
+  line-height: 50px;
+}
+
+.loginbox {
+  background-color: lightblue;
+  width: 400px;
+  height: 150px;
+  margin: auto;
+  text-align: center;
+  padding: 15px;
+  border-radius: 25px;
+}
+
+#play {
+  background-color: lightpink;
+  width: 150px;
+  margin: 50px;
+  color: white;
+}
+
+#play {
+  margin: 50px;
+}
+
+.gameboard {
+  background-color: white;
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.square {
+  background-color: lightpink;
+  width: 160px;
+  height: 160px;
+  margin: 3px;
+  float: left;
+  border-radius: 25px;
+  text-align: center;
+  font-size: 125px;
+  line-height: 160px;
+}
+
+.square:hover {
+  opacity: 0.8;
+}
+
+.clear {
+  clear: left;
+}
+
+.bottom {
+  background-color: white;
+  width: 800px;
+  height: 50px;
+  margin: auto;
+  text-align: center;
+}
+
+.button {
+  padding: 5px;
+  background-color:lightblue;
+  text-decoration: none;
+  width: 250px;
+  margin: 12px auto;
+  border-radius: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
+
+
+
+
+
