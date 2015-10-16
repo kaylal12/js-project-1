@@ -1,19 +1,33 @@
+@font-face {
+  font-family: MoonFlowerBold;
+  src: url(img/MoonFlowerBold.ttf);
+}
+
+html {
+  font-family: MoonFlowerBold;
+}
+
 .page {
-  background-image: url("img/background.jpeg");
+  background-color: white;
   width: 100%;
   margin: auto;
 }
 
 .header {
-  background-color: grey;
+  background-color: white;
   width: 800px;
-  height: 100px;
+  height: 150px;
   margin: auto;
   text-align: center;
 }
 
 h1 {
-  font-size: 48px;
+  font-size: 60px;
+}
+
+h3 {
+  font-size: 24px;
+  padding: 10px;
 }
 
 p {
@@ -21,13 +35,15 @@ p {
 }
 
 .message {
+  font-size: 24px;
   background-color: white;
   width: 800px;
   height: 50px;
+  margin-top: 20px;
 }
 
 .container {
-  background-color: lightblue;
+  background-color: white;
   width: 800px;
   height: 500px;
   margin: auto;
@@ -39,6 +55,7 @@ p {
   width: 150px;
   height: 100px;
   text-align: center;
+  border-radius: 25px;
 }
 
 .left {
@@ -51,13 +68,15 @@ p {
 
 .scorebox {
   background-color: white;
-  width: 50px;
+  width: 75px;
   height: 50px;
   margin: 0 auto;
+  font-size: 24px;
+  line-height: 50px;
 }
 
 .loginbox {
-  background-color: lightgreen;
+  background-color: lightblue;
   width: 400px;
   height: 150px;
   margin: auto;
@@ -67,12 +86,14 @@ p {
 }
 
 #play {
+  background-color: lightpink;
   width: 150px;
   margin: 50px;
+  color: white;
 }
 
 .gameboard {
-  background-color: lightgreen;
+  background-color: white;
   width: 500px;
   height: 500px;
   margin: 0 auto;
@@ -88,6 +109,12 @@ p {
   float: left;
   border-radius: 25px;
   text-align: center;
+  font-size: 125px;
+  line-height: 160px;
+}
+
+.square:hover {
+  opacity: 0.8;
 }
 
 .clear {
@@ -95,7 +122,7 @@ p {
 }
 
 .bottom {
-  background-color: grey;
+  background-color: white;
   width: 800px;
   height: 50px;
   margin: auto;
@@ -109,6 +136,13 @@ p {
   width: 250px;
   margin: 12px auto;
   border-radius: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.button:hover {
+  opacity: 0.8;
 }
 
 
