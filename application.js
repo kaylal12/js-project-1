@@ -160,6 +160,17 @@ $(document).ready(function() {
     return false;
   }
 
+  // var showGameCB = function showGameCB(error, data) {
+  //   if(error) {
+  //     console.error(error);
+  //     return;
+  //   }
+  //   gameId = data.game.id;
+  //   data.game.cell;
+
+  //   tttapi.showGame(gameId, token, showGameCB)
+  // }
+
   // set click event for reset button
   $("#reset").on('click', clear);
 
