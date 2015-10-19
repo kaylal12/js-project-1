@@ -2,7 +2,16 @@
 
 In this project I have created a simple tic tac toe game using javascript.
 
-In order to create this project, I needed to take what I have learned in class and apply it.
+## Goals:
+
+* Be deployed online, where the rest of the world can access it
+* Render a game board in the browser
+* Switch turns between X and O (or whichever markers you select)
+* Visually display which side won if a player gets three in a row or show a draw/"cat’s game" if neither wins
+* Use jQuery for DOM manipulation and event handling
+* Use AJAX for data storage and retrieval
+
+## Process
 
 To start off, I created a wireframe of what i wanted my webpage to look like:
 
@@ -25,6 +34,11 @@ Registering, logging in, creating games and marking cells seems to be working. H
 include a way to list and show the games.
 
 As of right now, the game is fully functioning (can play, see a winner, stop playing when there is a winner, show ties, show wins, etc), however, it is not fully commicating with the back-end.
+
+## Unsolved Problems
+
+* Reset button does not create a new game
+* Game cannot be retrieved and shown
 
 **[Play Tic Tac Toe!](http://kaylal12.github.io/js-project-1/)**
 
