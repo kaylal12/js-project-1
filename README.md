@@ -16,6 +16,7 @@ In this project I have created a simple tic tac toe game using javascript.
 To start off, I created a wireframe of what i wanted my webpage to look like:
 
 [Wireframe](img/Wireframe.jpg)
+[User Stories](img/userstories.JPG)
 
 It is a simple wireframe that shows me where everything will be placed and makes it easier for me to know what I need to do when actually writing out the code.
 
